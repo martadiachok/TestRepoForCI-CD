@@ -90,7 +90,7 @@
                 <configuration>
                     <suiteXmlFiles>
                         <suiteXmlFile>
-                            testng.xml
+                            EasyRest-Testing/testng.xml
                         </suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
