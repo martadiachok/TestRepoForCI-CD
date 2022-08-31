@@ -92,5 +92,56 @@
         </dependency>
 
     </dependencies>
+         
+         <build>
+    <pluginManagement>
+      <plugins>
+        
+        <plugin>
+          <artifactId>maven-clean-plugin</artifactId>
+          <version>${maven-clean.version}</version>
+        </plugin>
+       
+        <plugin>
+          <artifactId>maven-resources-plugin</artifactId>
+          <version>${maven-resources.version}</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>${maven-compiler.version}</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>${maven-surefire.version}</version>
+          <configuration>
+            <suiteXmlFiles>
+              <suiteXmlFile>testng.xml</suiteXmlFile>
+            </suiteXmlFiles>
+          </configuration>
+        </plugin>
+        <plugin>
+          <artifactId>maven-jar-plugin</artifactId>
+          <version>${maven-jar.version}</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-install-plugin</artifactId>
+          <version>${maven-install.version}</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-deploy-plugin</artifactId>
+          <version>${maven-deploy.version}</version>
+        </plugin>
+      
+        <plugin>
+          <artifactId>maven-site-plugin</artifactId>
+          <version>${maven-site.version}</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-project-info-reports-plugin</artifactId>
+          <version>${maven-project-info-reports}</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
 
 </project>
