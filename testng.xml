@@ -5,9 +5,7 @@
         <listener class-name="com.easyrest.tests.Listeners"/>
     </listeners>
     <test verbose="2" preserve-order="true" name="/Users/marta/Documents/EasyRest-Testing">
-        <classes><class name="com.easyrest.tests.LoginTest">
-            <methods><include name="testLogin"/>
-            </methods>
+        <classes><class name="com.easyrest.tests.SignUpTest">
         </class>
         </classes>
     </test>
