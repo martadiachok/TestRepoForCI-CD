@@ -1,4 +1,4 @@
-name: ActionOnPush
+name: OnPush
 
 on:
   push:
