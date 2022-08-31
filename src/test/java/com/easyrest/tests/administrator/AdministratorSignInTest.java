@@ -6,10 +6,14 @@ import com.easyrest.facade.SignInFacade;
 import com.easyrest.pages.AdministratorPage;
 import com.easyrest.pages.SignInPage;
 import com.easyrest.tests.BaseTest;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+
+import java.time.Duration;
 
 public class AdministratorSignInTest extends BaseTest {
     private final String email = ConfigProvider.administratorEmail;
@@ -19,12 +23,16 @@ public class AdministratorSignInTest extends BaseTest {
     private final String administratorPageUrl = ConfigProvider.administratorPanelUrl;
     private final String expectedAlertMessage = ConfigProvider.expectedAlertMessage;
     private SignInFacade signInFacade;
+    private WebDriverWait wait;
 
     @BeforeMethod
     public void goToSignInPage() {
         SignInPage signInPage = new SignInPage(driver);
         signInFacade = new SignInFacade(driver);
         signInPage.goToSignInPage();
+        wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        wait.until(ExpectedConditions.urlToBe(ConfigProvider.signInPageUrl));
+
     }
 
     @Test
