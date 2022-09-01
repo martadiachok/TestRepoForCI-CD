@@ -24,8 +24,3 @@ jobs:
           
       - name: Build with Maven
         run: mvn clean test
-        
-       # mvn test --file pom.xml
-
-     # - name: Maven Verify
-        # mvn -B clean verify
