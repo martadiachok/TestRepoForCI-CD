@@ -77,13 +77,8 @@
   <artifactId>lombok</artifactId>
   <version>1.18.22</version>
 </dependency>
-
-    </dependencies>
-         
-        <build>
-    <pluginManagement>
-        <plugins>
-                 <dependency>
+             
+              <dependency>
     <groupId>org.apache.maven.plugins</groupId>
     <artifactId>maven-clean-plugin</artifactId>
     <version>3.2.0</version>
@@ -99,19 +94,8 @@
     <artifactId>maven-compiler-plugin</artifactId>
     <version>3.10.1</version>
 </dependency>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.22.2</version>
-                <configuration>
-                    <suiteXmlFiles>
-                        <suiteXmlFile>
-                            src\test\resources\hello_testng_suite.xml
-                        </suiteXmlFile>
-                    </suiteXmlFiles>
-                </configuration>
-            </plugin>
-                 <dependency>
+             
+              <dependency>
     <groupId>org.apache.maven.plugins</groupId>
     <artifactId>maven-jar-plugin</artifactId>
     <version>3.2.2</version>
@@ -126,6 +110,26 @@
     <artifactId>maven-deploy-plugin</artifactId>
     <version>3.0.0</version>
 </dependency>
+
+    </dependencies>
+         
+        <build>
+    <pluginManagement>
+        <plugins>
+                
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.22.2</version>
+                <configuration>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>
+                            src\test\resources\hello_testng_suite.xml
+                        </suiteXmlFile>
+                    </suiteXmlFiles>
+                </configuration>
+            </plugin>
+                
         </plugins>
     </pluginManagement>
 </build> 
